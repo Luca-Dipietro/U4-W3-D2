@@ -10,14 +10,12 @@ public class Event {
     @Id
     @GeneratedValue
     private long id;
-
-    @Column(name = "title")
+    
     private String title;
 
     @Column(name = "event_date")
     private LocalDate eventDate;
 
-    @Column(name = "description")
     private String description;
 
     @Column(name = "event_type")
