@@ -32,7 +32,7 @@ public class Application {
 
         try {
             Event event1FromDB = ev.getById(1);
-            System.out.println(event1FromDB.getTitle());
+            System.out.println(event1FromDB.toString());
 
         } catch (NotFoundException ex) {
             System.out.println(ex.getMessage());
