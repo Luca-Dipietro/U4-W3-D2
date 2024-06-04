@@ -2,7 +2,7 @@ package lucadipietro.entities;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "events")
@@ -15,7 +15,7 @@ public class Event {
     private String title;
 
     @Column(name = "event_date")
-    private Date eventDate;
+    private LocalDate eventDate;
 
     @Column(name = "description")
     private String description;
@@ -31,8 +31,7 @@ public class Event {
 
     }
 
-    public Event(long id, String title, Date eventDate, String description, EventType eventType, Integer maxParticipants) {
-        this.id = id;
+    public Event(String title, LocalDate eventDate, String description, EventType eventType, Integer maxParticipants) {
         this.title = title;
         this.eventDate = eventDate;
         this.description = description;
@@ -56,11 +55,11 @@ public class Event {
         this.title = title;
     }
 
-    public Date getEventDate() {
+    public LocalDate getEventDate() {
         return eventDate;
     }
 
-    public void setEventDate(Date eventDate) {
+    public void setEventDate(LocalDate eventDate) {
         this.eventDate = eventDate;
     }
 
