@@ -31,7 +31,7 @@ public class Application {
 //        ev.saveEvent(event5);
 
         try {
-            Event event1FromDB = ev.getById(1);
+            Event event1FromDB = ev.getById(102);
             System.out.println(event1FromDB.toString());
 
         } catch (NotFoundException ex) {
@@ -39,7 +39,7 @@ public class Application {
         }
 
         try {
-            ev.deleteEvent(6);
+            ev.deleteEvent(106);
         } catch (NotFoundException ex) {
             System.out.println(ex.getMessage());
         }
